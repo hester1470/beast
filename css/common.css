@@ -1,0 +1,101 @@
+@charset "utf-8";
+/*
+当窗口小于1200px时，body的背景变成红色
+@media screen and (max-width:1200px){
+    body{
+        background-color: red;
+    }
+}
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  min-width: 980px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /*
+    
+    justify-content:center;
+    align-items: flex-start;
+    */
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+  height: 60px;
+  padding-top: 19px;
+  box-sizing: border-box;
+}
+.top .login {
+  font-size: 13px;
+}
+.top .login a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+.top .login a:hover {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  width: 960px;
+  height: 42px;
+  border-top: solid 3px #000;
+  border-bottom: solid 1px #000;
+  position: relative;
+}
+nav ul {
+  width: 960px;
+  list-style: none;
+  display: inline-flex;
+  text-align: center;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+nav ul li {
+  cursor: pointer;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+nav ul li:hover .second-menu {
+  display: flex;
+}
+nav ul h3 {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 16px;
+  font-family: "Times New Roman", "Microsoft YaHei", Times, serif !important;
+}
+nav ul h4 {
+  font-size: 13px;
+  font-weight: normal;
+}
+nav ul hr {
+  border-bottom: solid 2px #000;
+  width: 55px;
+  margin-top: 2px;
+}
+nav ul .second-menu {
+  display: none;
+  position: absolute;
+  background-color: red;
+  width: 960px;
+  height: 234px;
+  padding: 40px 30px 40px 5px;
+  top: 46px;
+  left: 0px;
+}
+nav ul .second-menu .s-m-bigpic img {
+  width: 340px;
+  height: 200px;
+}

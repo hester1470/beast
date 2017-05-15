@@ -1,0 +1,127 @@
+@charset "utf-8";
+/*
+当窗口小于1200px时，body的背景变成红色
+@media screen and (max-width:1200px){
+    body{
+        background-color: red;
+    }
+}
+*/
+//---------------参数---------------
+
+//---------------函数---------------
+//1.链接的颜色设置
+.a_style(@a_color,@a_hover){
+    a{
+        text-decoration: none;
+        color:@a_color;
+        cursor:pointer;
+    };
+    a:hover{
+        text-decoration: none;
+        color: @a_hover;
+        cursor:pointer;
+    };
+};
+//---------------样式---------------
+*{
+    margin:0px;
+    padding: 0px;
+}
+html{
+    min-width: 980px;
+}
+body{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    /*
+    
+    justify-content:center;
+    align-items: flex-start;
+    */
+}
+//顶部
+.top{
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    height: 60px;
+    padding-top:19px;
+    box-sizing: border-box;
+    //1.登录和注册
+    .login{
+        font-size: 13px;
+        .a_style(#000,#000);
+        
+    }
+}
+//导航
+nav{
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    height: 42px;
+    border-top:solid 3px #000;
+    border-bottom: solid 1px #000;
+    position: relative;
+    ul{
+        width: 960px;
+        list-style: none;
+        display: inline-flex;
+        text-align: center;
+        justify-content: space-between;
+        padding-top: 5px;
+        li{
+            cursor:pointer;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        li:hover{
+            .second-menu{
+                display: flex;
+            }
+        }
+        h3{
+            font-size: 13px;
+            font-weight: normal;
+            line-height: 16px;
+            font-family: "Times New Roman","Microsoft YaHei",Times,serif !important
+        }
+        h4{
+            font-size: 13px;
+            font-weight: normal;
+        }
+        hr{
+            border-bottom: solid 2px #000;
+            //display: none;
+            width: 55px;
+            margin-top: 2px;
+        }
+        //隐藏的二级导航
+        .second-menu{
+            display: none;
+            position:absolute;
+            background-color: red;
+            width:960px;
+            height: 234px;
+            padding: 40px 30px 40px 5px;
+            top:46px;
+            left:0px;
+            
+            //1.列表
+            .s-m-list{}
+            //2.小图
+            .s-m-smallpic{}
+            //3.大图
+            .s-m-bigpic{
+                img{
+                    width: 340px;
+                    height: 200px;
+                }
+            }
+        };
+    }
+}
+
